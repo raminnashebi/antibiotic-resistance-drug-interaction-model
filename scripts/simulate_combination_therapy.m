@@ -1,3 +1,22 @@
+% Simulate sensitive (S) and resistant (R) bacteria under combination
+% therapy with two antibiotics (A, B) whose interaction is set by
+% landa1 (on S) and landa2 (on R).
+%
+% Solves the ODE model in src/Evolution_of_antibiotic_resistance.m and
+% plots S and R (scaled by 1e9) and the scaled drug concentrations.
+%
+% Note: the runs saved in results/fig6_combination_therapy/ used
+% alpha11 = alpha12 = Emax_s/IC50_s (0.608), as in the first version of
+% this script. The formula below also multiplies by moo_1/teta_1, so it
+% does not reproduce those saved runs.
+
+clear; close all;
+
+script_dir = fileparts(mfilename('fullpath'));
+if isempty(script_dir)
+    script_dir = pwd;
+end
+addpath(fullfile(fileparts(script_dir), 'src'));
 
 beta_s=1;
 beta_r=0.65;

@@ -11,12 +11,12 @@ function dydt = Evolution_of_antibiotic_resistance(t,y,K,beta_s,beta_r,moo_s,moo
 % alpha12: effect of Antibiotic B on sensitive bacteria
 % alpha21: effect of Antibiotic A on resistant bacteria
 % alpha22: effect of Antibiotic B on resistant bacteria
-% teta_1:
-% teta_2:
-% moo_1:
-% moo_2:
-% landa1:
-% landa2:
+% teta_1: supply rate of Antibiotic A
+% teta_2: supply rate of Antibiotic B
+% moo_1: elimination rate of Antibiotic A
+% moo_2: elimination rate of Antibiotic B
+% landa1: interaction strength of A and B on sensitive bacteria
+% landa2: interaction strength of A and B on resistant bacteria
 
  dydt = zeros(4,1);
  
