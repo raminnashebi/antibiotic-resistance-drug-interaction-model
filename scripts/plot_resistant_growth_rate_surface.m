@@ -1,3 +1,12 @@
+% Surface plot of the resistant-strain growth rate gr over the drug
+% interaction parameters lambda1 (sensitive) and lambda2 (resistant).
+%
+% Here K = 0.0367 is the ratio of drug effect on resistant vs sensitive
+% bacteria (alpha21 = 0.0367*alpha11 in simulate_combination_therapy.m),
+% not the carrying capacity used in the ODE model.
+
+clear; close all;
+
 beta_s=1;
 beta_r=0.65;
 moo_s=0.5;
@@ -26,7 +35,6 @@ alpha22=(Emax_r/IC50_r)*(moo_2/teta_2);
 K=0.0367;
 gs=0;
 
-syms lambda1 lambda2
 lambda1=-1.66:0.1:1.66;
 lambda2=-1.66:0.1:1.66;
 [lambda1 lambda2]=meshgrid(lambda1,lambda2);
